@@ -42,6 +42,11 @@ Favourites: id, title, alt titles, date, artist, creation location, short descri
 
 **Wireframes**
 
+<img width="500" height="500" alt="1000025257" src="https://github.com/user-attachments/assets/15b0ac81-218b-4418-bd7d-7b25e28d8964" />
+<img width="500" height="500" alt="1000025258" src="https://github.com/user-attachments/assets/0eaf418c-6eb1-4884-ba3c-5e6feb535092" />
+<img width="500" height="500" alt="1000025259" src="https://github.com/user-attachments/assets/3bacc273-1bac-432b-b2f9-b54da6859392" />
+<img width="500" height="500" alt="1000025260" src="https://github.com/user-attachments/assets/a10a9549-43fa-4df7-afe6-61772eb80fe0" />
+
 **Team Roles**
 * Front-End lead: Autumn
 * API lead: Ethan
