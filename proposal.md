@@ -47,3 +47,5 @@ Favourites: id, title, alt titles, date, artist, creation location, short descri
 * API lead: Ethan
 * Database lead: Kristine
 
+
+:)
