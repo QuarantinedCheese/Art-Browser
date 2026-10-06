@@ -10,6 +10,9 @@ We want to provide a way for users to navigate the Art Institute of Chicago's ar
 * Notes on works
 * Filtering
 
+*Later List*
+* Custom collections
+
 **External API**
 https://api.artic.edu/docs/#introduction
 Used to access library of works
