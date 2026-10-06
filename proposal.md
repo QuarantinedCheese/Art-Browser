@@ -1,7 +1,8 @@
-**Problem and users**
+# Proposal
+
 We want to provide a way for users to navigate the Art Institute of Chicago's art catalogue with ease. We plan to make it possible for users to find an artwork they enjoy, and leave themselves notes for future reference.
 
-**Features**
+## Features
 * Sorting
 * Browse
 * Favourites/saved
@@ -15,23 +16,23 @@ We want to provide a way for users to navigate the Art Institute of Chicago's ar
 * A user can rate artworks
 * Sharing favorites to other users
 
-**External API**
-https://api.artic.edu/docs/#introduction
-Used to access library of works
+## External API
+https://api.artic.edu/docs/#introduction  
+Used to access library of works  
 
-No key required, however it will be limited to 60 requests per minute.
-Example request: https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id
+No key required, however it will be limited to 60 requests per minute.  
+Example request: https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id  
 ```
 {"data":{"id":27992,"title":"A Sunday on La Grande Jatte \u2014 1884","image_id":"2d484387-2509-5e8e-2c43-22f9981972eb"},"info":{"license_text":"The `description` field in this response is licensed under a Creative Commons Attribution 4.0 Generic License (CC-By) and the Terms and Conditions of artic.edu. All other data in this response is licensed under a Creative Commons Zero (CC0) 1.0 designation and the Terms and Conditions of artic.edu.","license_links":["https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/","https:\/\/www.artic.edu\/terms"],"version":"1.16"},"config":{"iiif_url":"https:\/\/www.artic.edu\/iiif\/2","website_url":"http:\/\/www.artic.edu"}}
 
 ```
 
-**Data Model Draft**
-User: name, email, date, id
-Artworks: id, title, alt titles, date, artist, creation location, short description,
-Favourites: id, title, alt titles, date, artist, creation location, short description, notes
+## Data Model Draft
+User: name, email, date, id  
+Artworks: id, title, alt titles, date, artist, creation location, short description,  
+Favourites: id, title, alt titles, date, artist, creation location, short description, notes  
 
-**Endpoint list**
+## Endpoint list
 |Method|Path                       |Operation                           |Success code(s)|Error code(s)                   |
 |------|---------------------------|------------------------------------|---------------|--------------------------------|
 |GET   |/api/artworks/search       |Search Artworks via Institute API   |200 OK         |400 Bad Request, 502 Bad Gateway|
@@ -40,14 +41,14 @@ Favourites: id, title, alt titles, date, artist, creation location, short descri
 |PATCH |/api/user/                 |Updates a user                      |200 OK         |400 Bad Request, 502 Bad Gateway|
 |DELETE|/api/user/favourites/remove|Removes an item from favourites list|204 OK         |400 Bad Request, 502 Bad Gateway|
 
-**Wireframes**
+## Wireframes
 
 <img width="500" height="500" alt="1000025257" src="https://github.com/user-attachments/assets/15b0ac81-218b-4418-bd7d-7b25e28d8964" />
 <img width="500" height="500" alt="1000025258" src="https://github.com/user-attachments/assets/0eaf418c-6eb1-4884-ba3c-5e6feb535092" />
 <img width="500" height="500" alt="1000025259" src="https://github.com/user-attachments/assets/3bacc273-1bac-432b-b2f9-b54da6859392" />
 <img width="500" height="500" alt="1000025260" src="https://github.com/user-attachments/assets/a10a9549-43fa-4df7-afe6-61772eb80fe0" />
 
-**Team Roles**
-* Front-End lead: Autumn
-* API lead: Ethan
-* Database lead: Kristine
+## Team Roles
+* Front-End lead: Autumn  
+* API lead: Ethan  
+* Database lead: Kristine  
