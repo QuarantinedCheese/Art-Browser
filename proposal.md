@@ -12,6 +12,8 @@ We want to provide a way for users to navigate the Art Institute of Chicago's ar
 
 *Later List*
 * Custom collections
+* A user can rate artworks
+* Sharing favorites to other users
 
 **External API**
 https://api.artic.edu/docs/#introduction
@@ -34,6 +36,8 @@ Favourites: id, title, alt titles, date, artist, creation location, short descri
 |------|---------------------------|------------------------------------|---------------|--------------------------------|
 |GET   |/api/artworks/search       |Search Artworks via Institute API   |200 OK         |400 Bad Request, 502 Bad Gateway|
 |GET   |/api/user/favourites/list  |Lists out all works saved by user   |200 OK         |400 Bad Request, 502 Bad Gateway|
+|POST  |/api/user/                 |Creates a user                      |210 OK         |400 Bad Request, 502 Bad Gateway|
+|PATCH |/api/user/                 |Updates a user                      |200 OK         |400 Bad Request, 502 Bad Gateway|
 |DELETE|/api/user/favourites/remove|Removes an item from favourites list|204 OK         |400 Bad Request, 502 Bad Gateway|
 
 **Wireframes**
