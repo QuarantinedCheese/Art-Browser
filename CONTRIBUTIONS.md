@@ -13,3 +13,8 @@ _Kristine May Garcia_
 * Helped with feature/later list
 * Started endpoint list
 * prepared REPO for later work, including /api, /web, and .gitignore
+
+*Autumn Gun-Munro*
+  - Helped brainstorm project
+  - Contributed with the features and later list
+  - Created and added wireframe sketches
