@@ -46,6 +46,3 @@ Favourites: id, title, alt titles, date, artist, creation location, short descri
 * Front-End lead: Autumn
 * API lead: Ethan
 * Database lead: Kristine
-
-
-:)
