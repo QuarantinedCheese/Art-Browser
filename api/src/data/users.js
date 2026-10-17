@@ -64,7 +64,7 @@ export function insertUser(fields) {
 }
 
 export function updateUserById(id, changes) {
-    // TODO: Update user data (eg. email, username, or name)
+    // Allows us to update user data as required.
     const user = findUserById(id)
     if (user) {
         Object.assign(user, changes);
@@ -74,4 +74,10 @@ export function updateUserById(id, changes) {
 
 export function deleteUserById(id) {
     // TODO: Delete user entry via ID
+    const index = users.findIndex((user) => user.id === id);
+    if (index === -1) {
+        return false; // User doesn't exist
+    }
+    users.splice(index, 1);
+    return true; // User exists, and was deleted successfully
 }
