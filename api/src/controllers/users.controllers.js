@@ -17,7 +17,12 @@ export function listUsers(req, res) {
 }
 
 export function getUser(req, res) {
-    // TODO: Find requested user
+    // Finds user by ID and throws an error if it fails to find user.
+    const user = findUserById(req.params.id);
+    if (!user) {
+        throw new HttpError(404, 'User not found.');
+    }
+    res.json({data: user});
 }
 
 export function createUser(req, res) {
