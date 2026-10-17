@@ -35,11 +35,15 @@ export function updateUser(req, res) {
     // Updates user profile based on the request
     const user = updateUserById(req.params.id, req.body);
     if (!user) {
-        throw newHttpError(404, 'User not found');
+        throw newHttpError(404, 'User not found.');
     }
     res.json({data: user});
 }
 
 export function deleteUser(req, res) {
     // TODO: delete user profile
+    if (!deleteUserById(req.params.id)) {
+        throw new HttpError(404, 'User not found.');
+    }
+    res.status(204).end();
 }
