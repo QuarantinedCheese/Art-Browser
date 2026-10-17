@@ -1,14 +1,12 @@
 # M1. PROPOSAL AND API DESIGN
 
 _Kristine May Garcia_
-
 - Helped in brainstorming the project
 - Helped and finished the endpoint list
 - Contributed in the features and later list
 - Helped in building the M1 idea
 
 *Ethan Pothier*
-
 * Helped brainstorm project
 * Helped with feature/later list
 * Started endpoint list
@@ -18,3 +16,15 @@ _Kristine May Garcia_
   - Helped brainstorm project
   - Contributed with the features and later list
   - Created and added wireframe sketches
+
+
+# M2. Express REST API
+
+_Kristine May Garcia_
+ -  
+
+*Ethan Pothier*
+* 
+
+*Autumn Gun-Munro*
+  - 
