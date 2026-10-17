@@ -26,7 +26,9 @@ export function getUser(req, res) {
 }
 
 export function createUser(req, res) {
-    // TODO: create new user
+    // Creates new user based on request
+    const user = insertUser(req.body);
+    res.location(`/api/users/${user.id}`).status(201).json({data: user});
 }
 
 export function updateUser(req, res) {
