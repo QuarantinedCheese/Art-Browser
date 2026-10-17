@@ -65,6 +65,11 @@ export function insertUser(fields) {
 
 export function updateUserById(id, changes) {
     // TODO: Update user data (eg. email, username, or name)
+    const user = findUserById(id)
+    if (user) {
+        Object.assign(user, changes);
+    }
+    return user;
 }
 
 export function deleteUserById(id) {
