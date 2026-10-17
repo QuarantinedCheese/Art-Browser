@@ -32,7 +32,12 @@ export function createUser(req, res) {
 }
 
 export function updateUser(req, res) {
-    // TODO: update user profile
+    // Updates user profile based on the request
+    const user = updateUserById(req.params.id, req.body);
+    if (!user) {
+        throw newHttpError(404, 'User not found');
+    }
+    res.json({data: user});
 }
 
 export function deleteUser(req, res) {
