@@ -57,7 +57,10 @@ export function findUserById(id) {
 }
 
 export function insertUser(fields) {
-    // TODO: Add user using the given fields
+    // Creates new user using fields. The fields here should already be validated.
+    const user = {id: randomUUID(), ...fields, creationDate: new Date().toISOString() };
+    users.push(user);
+    return user;
 }
 
 export function updateUserById(id, changes) {
