@@ -41,11 +41,19 @@ const users = [
 // Extra functions may be required for other files.
 // These will be used by src/controllers/users.controllers.js, then routed
 export function findUsers({username, q} = {}) {
-    // TODO: Find a list of users by username or by search 'q'
+    let searchResult = users;
+    if (username) { // Finds user by username
+        results = results.filter((user) => user.username === username);
+    }
+    if (q) { // Finds user by the search
+        const search = q.toLowerCase();
+        results = results.filter((user) => user.username.toLowerCase().includes(search));
+    }
 }
 
 export function findUserById(id) {
-    // TODO: Find user by given ID
+    // Returns the user with matching ID
+    return users.find((user) => user.id === id); 
 }
 
 export function insertUser(fields) {
