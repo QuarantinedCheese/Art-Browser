@@ -24,7 +24,7 @@ _Kristine May Garcia_
  -  
 
 *Ethan Pothier*
-* 
+* Prepared /api for API implementation
 
 *Autumn Gun-Munro*
   - 
