@@ -73,7 +73,7 @@ export function updateUserById(id, changes) {
 }
 
 export function deleteUserById(id) {
-    // TODO: Delete user entry via ID
+    // Deletes user entry using the ID
     const index = users.findIndex((user) => user.id === id);
     if (index === -1) {
         return false; // User doesn't exist
