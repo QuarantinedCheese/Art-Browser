@@ -21,10 +21,11 @@ _Kristine May Garcia_
 # M2. Express REST API
 
 _Kristine May Garcia_
- -  
+ - 
 
 *Ethan Pothier*
 * Prepared /api for API implementation
+* Implemented GET/POST/PUT/PATCH/DELETE for all user resources.
 
 *Autumn Gun-Munro*
   - 
