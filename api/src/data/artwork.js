@@ -1,4 +1,6 @@
-// TODO: Connect this data to align and fetch data from the Museum's API
+// TODO: Connect this data to align and fetch data from the
+// Art Institute of Chicago's API
+
 // Infomation needed based on data model draft:
 // id, title, alt titles, date, artist, creation location, short description
 
@@ -12,3 +14,7 @@
 
 // TODO: fetch a specific piece by ID
 // If available, check internal memory first.
+
+
+// TODO (maybe): Add to internal memory
+// TODO (maybe): delete from internal memory
