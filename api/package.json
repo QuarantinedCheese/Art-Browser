@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "type": "module",
+  "engines": { "node": ">=24"},
   "dependencies": {
     "express": "^5.3.0"
   }
