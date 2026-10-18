@@ -8,6 +8,8 @@ import { requestLogger } from './middleware/request-logger.js';
 import { notFound } from './middleware/not-found.js';
 import { errorHandler } from './middleware/error-handler.js';
 
+import { usersRouter } from './routes/users.routes.js';
+
 export const app = express();
 
 // Express runs routes top to bottom, order matters
@@ -19,7 +21,7 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 // Placeholder routes, this is how Express knows what to do with each path
-// app.use('/api/users', usersRouter);
+app.use('/api/users', usersRouter);
 // app.use('/api/favourites', favsRouter);
 // app.use('/api/artwork', artworkRouter);
 
