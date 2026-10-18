@@ -10,7 +10,7 @@ export function errorHandler(err, req, res, next) {
 
   // express.json() sets type 'entity.parse.failed' when the body is not valid JSON.
   if (err.type === 'entity.parse.failed') {
-    return res.status(400).json({ error: { message: 'Request body must be valid JSON' } });
+    return res.status(400).json({ error: { message: `Request body must be valid JSON (Recieved: ${req.body})` } });
   }
 
   const status = err.status ?? 500;
