@@ -12,7 +12,12 @@ export function validateUserInput(body, { partial = false } = {}) {
 
     if (shouldCheck('username')) {
         // TODO: validate that username works
-        const username = typeof body.username == 'string' ? body.title.trim() : '';
+        const username = typeof body.username == 'string' ? body.username.trim() : '';
+        if (5 > username.length || username.length > 30) {
+            errors.username = 'Username must be 5-30 characters.';
+        } else {
+            value.username = username;
+        }
     }
 
 
