@@ -1,5 +1,5 @@
-import { findUsers, deleteUserById, findUserById, insertUser, updateUserById } from "../data/users";
-import { HttpError, httpError } from '../utils/http-error.js';
+import { findUsers, deleteUserById, findUserById, insertUser, updateUserById } from "../data/users.js";
+import { HttpError } from '../utils/http-error.js';
 
 // req is the user request, res is the response we are building with each function
 
@@ -13,7 +13,7 @@ export function listUsers(req, res) {
     if (q !== undefined && typeof q !== 'string') {
         throw new HttpError(400, 'invalid query', {q: 'Send q only once'});
     }
-    res.json({data: findUsers( username, q)})
+    res.json({data: findUsers( {username, q} )})
 }
 
 export function getUser(req, res) {
