@@ -32,5 +32,10 @@ export function validateUserInput(body, { partial = false } = {}) {
         }
     }
 
+    // Make sure they sent at least one field for partial, otherwise send another error
+    if (partial && Object.keys(value).length === 0 && Object.keys(errors).length ===0) {
+        errors.body = 'Pass at least one field to change.'
+    }
+
     return {value, errors}
 }
