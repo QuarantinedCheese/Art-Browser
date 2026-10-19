@@ -28,6 +28,8 @@ _Kristine May Garcia_
 * Implemented and tested GET/POST/PATCH/DELETE for all user resources, including validation
 * Implemented Error handling
 * Assisted with favourites data.
+* Initalized api/README.md to be filled out
+* Added api/users/ information to README
 
 *Autumn Gun-Munro*
   - 
