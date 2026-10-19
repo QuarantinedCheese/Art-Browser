@@ -26,7 +26,7 @@ Current datamodel for users goes as follows:
 * id
 * username
 * email
-* account creation
+* account creation date
  
 This may be expanded in the future.
 
