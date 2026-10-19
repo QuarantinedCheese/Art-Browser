@@ -1,12 +1,12 @@
 // TODO: Routing for the favourites
 
 import { Router } from "express";
-import { createFavourites, validateFavourites, updateFavourites, deleteFavourites } ;
+import { createFavourite, findFavourites, updateFavourites,  deleteFavourite} from '../controllers/favourites.controllers.js';
 import { validateFavourites } from "../middleware/validate-favourites";
 
 export const favouritesRouter = Router();
 
-favouritesRouter.get
-favouritesRouter.post
-favouritesRouter.patch
-favouritesRouter.delete
+favouritesRouter.get('/', findFavourites);
+favouritesRouter.post('/', validateFavourites(), createFavourite);
+favouritesRouter.patch('/:id', validateFavourites(), updateFavourites);
+favouritesRouter.delete('/:id', deleteFavourite);

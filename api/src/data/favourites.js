@@ -61,7 +61,7 @@ export function createFavourite(artwork) {
 export function findFavourites({ q } = {}){
     let results = favourites
     if (q) {
-        const search = q.toLowercase();
+        const search = q.toLowerCase();
         results = results.filter((favourite) => (favourite.title.toLowerCase().includes(search)))
     }
     return results;
@@ -75,7 +75,7 @@ export function findFavouriteById(favouritesId) {
 }
 //Update
 export function updateFavourites(favouritesId, updates) {
-    const favourite = getFavouriteById(favouritesId);
+    const favourite = findFavouriteById(favouritesId);
 
     if(favourite) {
         Object.assign(favourite, updates);
