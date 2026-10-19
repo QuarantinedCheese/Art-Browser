@@ -8,6 +8,7 @@ import { requestLogger } from './middleware/request-logger.js';
 import { notFound } from './middleware/not-found.js';
 import { errorHandler } from './middleware/error-handler.js';
 
+import { artworkRouter } from './routes/artworks.routes.js';
 import { usersRouter } from './routes/users.routes.js';
 
 export const app = express();
@@ -23,7 +24,7 @@ app.get('/api/health', (req, res) => {
 // Placeholder routes, this is how Express knows what to do with each path
 app.use('/api/users', usersRouter);
 // app.use('/api/favourites', favsRouter);
-// app.use('/api/artwork', artworkRouter);
+app.use('/api/artwork', artworkRouter);
 
 
 // Must stay last
