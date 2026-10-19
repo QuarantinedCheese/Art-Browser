@@ -32,4 +32,7 @@ _Kristine May Garcia_
 * Added api/users/ information to README
 
 *Autumn Gun-Munro*
-  - 
+  - Integrated the Art Institute of Chicago API
+  - In memory caching
+  - Timeout handling
+  - Artwork data, controllers, router
