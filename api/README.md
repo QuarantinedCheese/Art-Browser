@@ -8,7 +8,7 @@ To begin working with the API, you must first open the /api in an integrated ter
 The first command ensures that all node modules are installed, and the second readies the environment variables.
 At the current moment, the only env variable is PORT, set to 4000 by default.
 
-Once setup is complete, ensure you are still in the /api, and run `npm run dev` to continuously, and `npm run start` to start it once, in which case if the server crashes, it will stay down.
+Once setup is complete, ensure you are still in the /api, and run `npm run dev` to run it continuously, and `npm run start` to start it once, in which case if the server crashes, it will stay down.
 
 ## Endpoints Table
 ### User
