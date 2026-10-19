@@ -28,7 +28,7 @@ export function getFavouriteById (req, res) {
     res.json({ data : favourite});
 }
 
-export function updateFavouriteConroller (req, res) {
+export function updateFavouriteController (req, res) {
     const favourite = updateFavourites(req.params.id, req.body);
 
     if (!favourite) {
