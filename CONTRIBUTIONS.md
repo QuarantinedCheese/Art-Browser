@@ -25,7 +25,7 @@ _Kristine May Garcia_
 
 *Ethan Pothier*
 * Prepared /api for API implementation
-* Implemented and tested GET/POST/PUT/PATCH/DELETE for all user resources, including validation
+* Implemented and tested GET/POST/PATCH/DELETE for all user resources, including validation
 * Implemented Error handling
 * Assisted with favourites data.
 
