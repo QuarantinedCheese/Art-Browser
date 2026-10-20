@@ -2,14 +2,8 @@
 
 import { createFavourite, findFavourites, findFavouriteById, updateFavourites, deleteFavourite } from "../data/favourites.js";
 import { HttpError } from "../utils/http-error.js";
-import { validateFavourites } from "../validators/favourite.js";
 
 export function createFavouriteController (req, res) {
-    const errors = validateFavourites(req.body);
-
-if (errors) {
-    return res.status(400).json({ errors});
-}
     const favourite = createFavourite(req.body);
 
     res.location(`/api/favourites/${favourite.favouritesId}`)
@@ -18,9 +12,12 @@ if (errors) {
 }
 
 export function findFavouritesController (req, res) {
-    const favourites = findFavourites(req.query);
-
-    res.json({data: favourites});
+    const {favourites, q} = req.query
+    // Search Validation
+    if (q !== undefined && typeof q !== 'string') {
+        throw new HttpError(400, 'invalid query', {q: 'Send q only once'});
+    }
+    res.json({ data: findFavourites( {favourites, q} ) });
 }
 
 export function getFavouriteById (req, res) {

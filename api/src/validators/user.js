@@ -24,20 +24,20 @@ export function validateUserInput(body, { partial = false } = {}) {
 
     if (shouldCheck('email')) {
         // Regex taken via https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
-        const re = /^\S+@\S+\.\S+$/
-        console.log(body.email)
-        console.log(body.email.toLowerCase().match(re))
+        const re = /^\S+@\S+\.\S+$/;
+        console.log(body.email);
+        console.log(body.email.toLowerCase().match(re));
         if (body.email.toLowerCase().match(re)) { // Tests email against the regex
-            value.email = body.email
+            value.email = body.email;
         } else {
-            errors.email = 'Email format invalid.'
+            errors.email = 'Email format invalid.';
         }
     }
 
     // Make sure they sent at least one field for partial, otherwise send another error
     if (partial && Object.keys(value).length === 0 && Object.keys(errors).length ===0) {
-        errors.body = 'Pass at least one field to change.'
+        errors.body = 'Pass at least one field to change.';
     }
 
-    return {value, errors}
+    return {value, errors};
 }

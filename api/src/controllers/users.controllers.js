@@ -13,7 +13,7 @@ export function listUsers(req, res) {
     if (q !== undefined && typeof q !== 'string') {
         throw new HttpError(400, 'invalid query', {q: 'Send q only once'});
     }
-    res.json({data: findUsers( {username, q} )})
+    res.json({ data: findUsers( {username, q} ) });
 }
 
 export function getUser(req, res) {
@@ -41,7 +41,7 @@ export function updateUser(req, res) {
 }
 
 export function deleteUser(req, res) {
-    // TODO: delete user profile
+    // Deletes the user profile
     if (!deleteUserById(req.params.id)) {
         throw new HttpError(404, 'User not found.');
     }

@@ -35,11 +35,19 @@ This may be expanded in the future.
 
 ## Test cURL Commands
 All commands in this section have been tested with Windows Git Bash
+Commands generated using `https://curlbuilder.com/`.
 ### User
 GET: `curl -XGET 'http://localhost:4000/api/users/'`\
-GET (with id): `curl -XGET 'http://localhost:4000/api/users/:id'`\
+GET (with ID): `curl -XGET 'http://localhost:4000/api/users/:id'`\
 POST: `curl -XPOST -H "Content-type: application/json" -d '{"username": "TestUsername20", "email": "TestEmail@email.com"}' 'http://localhost:4000/api/users/'`\
 PATCH: `curl -XPATCH -H "Content-type: application/json" -d '{"username": "TestUsername20"}' 'http://localhost:4000/api/users/:id'`\
 DELETE: `curl -XDELETE 'http://localhost:4000/api/users/:id'`
 ### Favourites
+GET: `curl -XGET 'http://localhost:4000/api/favourites/?q=cow`\
+GET (with ID): `curl -XGET 'http://localhost:4000/api/favourites/:id'`\
+POST: `curl -XPOST -H "Content-type: application/json" -d '{"artist": "me", "title": "me when", "id": "24234"}' 'http://localhost:4000/api/favourites/'`\
+PATCH:`curl -XPATCH -H "Content-type: application/json" -d '{"artist": "me"}' 'http://localhost:4000/api/favourites/:id'`\
+DELETE: `curl -XDELETE 'http://localhost:4000/api/favourites/:id'`
 ### Artwork
+GET: `curl -XGET 'http://localhost:4000/api/favourites/?q=hoku`\
+GET (with ID) `curl -XGET 'http://localhost:4000/api/favourites/:id`:

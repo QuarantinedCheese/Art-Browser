@@ -1,24 +1,43 @@
 // TODO: ensure favourite inputs and fully valid
 
-export function validateFavourites(data) {
+export function validateFavourites(body, {partial = false} = {}) {
     const errors = {};
+    const values = {};
+    const shouldCheck = (field) => !partial || body[field] !== undefined;
 
-    if (typeof data.title !== "string" || !data.title.trim()) {
-        errors.title = "Title is required.";
+    if (shouldCheck('title')) {
+        const title = typeof body.title === 'string' ? body.title.trim() : '';
+        if (title.length <= 0) {
+            errors.title = 'Title must be at least one character';
+        } else {
+            values.title = title;
+        }
     }
-    if (typeof data.artist !== "string" || !data.artist.trim()) {
-        errors.artist = "Artist is required.";
+
+    if (shouldCheck('artist')) {
+        const artist = typeof body.artist === 'string' ? body.artist.trim() : '';
+        if (artist.length <= 0) {
+            errors.artist = 'Artist name must be at least one character';
+        } else {
+            values.artist = artist;
+        }
     }
-    if (typeof data.id !== "string" || !data.id.trim()) {
-        errors.id = "Please input valid id.";
+
+    if (!partial) {
+        const instituteId = body.id;
+        if (!instituteId) {
+            errors.id = 'The artwork\'s Institute ID must exist.';
+        } else {
+            values.id = instituteId;
+        }
     }
-    if (typeof data.favouritesId !== "string" || !data.favouritesId.trim()) {
-        errors.favouritesId = "Invalid favourites ID.";
+
+    if (partial && Object.keys(values).length === 0 && Object.keys(errors).length === 0) {
+        errors.body = 'Pass at least one field to change.';
     }
-    if (Object.keys(errors).length > 0) {
-        return errors;
-    }
-    return null;
+
+    console.log(values)
+    return {values, errors};
 }
 
 

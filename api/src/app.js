@@ -23,7 +23,6 @@ app.get('/api/health', (req, res) => {
 });
 // Placeholder routes, this is how Express knows what to do with each path
 app.use('/api/users', usersRouter);
-// app.use('/api/favourites', favsRouter);
 app.use('/api/favourites', favouritesRouter);
 app.use('/api/artwork', artworkRouter);
 

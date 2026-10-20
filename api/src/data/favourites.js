@@ -50,9 +50,7 @@ const favourites = [
 //following functions follow CRUD
 //Create
 export function createFavourite(artwork) {
-    const newFavourite = {
-        favouritesId: randomUUID(), ...artwork
-    };
+    const newFavourite = {favouritesId: randomUUID(), ...artwork};
 
     favourites.push(newFavourite);
     return newFavourite;
@@ -62,7 +60,10 @@ export function findFavourites({ q } = {}){
     let results = favourites
     if (q) {
         const search = q.toLowerCase();
-        results = results.filter((favourite) => (favourite.title.toLowerCase().includes(search)))
+        results = results.filter((favourite) => 
+            favourite.title.toLowerCase().includes(search) ||
+            favourite.artist.toLowerCase().includes(search)
+        )
     }
     return results;
     // May need to be expanded to include genre filtering in the future
