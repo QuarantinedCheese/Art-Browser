@@ -21,7 +21,10 @@
 # M2. Express REST API
 
 *Kristine May Garcia*
- - 
+ - Added data for favourites
+ - Added routing
+ - Added validators
+ - Added controllers
 
 *Ethan Pothier*
 * Prepared /api for API implementation
