@@ -41,5 +41,5 @@ GET (with id): `curl -XGET 'http://localhost:4000/api/users/:id'`\
 POST: `curl -XPOST -H "Content-type: application/json" -d '{"username": "TestUsername20", "email": "TestEmail@email.com"}' 'http://localhost:4000/api/users/'`\
 PATCH: `curl -XPATCH -H "Content-type: application/json" -d '{"username": "TestUsername20"}' 'http://localhost:4000/api/users/:id'`\
 DELETE: `curl -XDELETE 'http://localhost:4000/api/users/:id'`
-### Artwork
 ### Favourites
+### Artwork
