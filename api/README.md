@@ -31,7 +31,41 @@ Current datamodel for users goes as follows:
 This may be expanded in the future.
 
 ### Favourites
+|Method| Path              |Success Code(s)| Error Code(s)                |
+|------|-------------------|---------------|------------------------------|
+|GET   |/api/favourites/   |200 OK         |400 Bad Request               |
+|GET   |/api/favourites/:id|200 OK         |404 Not Found                 |
+|POST  |/api/favourites/   |201 Created    |400 Bad Request               |
+|PATCH |/api/favourites/:id|200 OK         |400 Bad Request, 404 Not Found|
+|DELETE|/api/favourites/:id|204 No Content |404 Not Found                 |
+ 
+Many things have changed for favourites as did user, we had mistakenly left out POST, PATCH, and DELETE for favourites, which has been fixed in implementation, as well as the path being unnecessary, which has also been fixed. 
+
+Current data model for favourites:
+* our ID
+* Chicago Institute's ID
+* title
+* artist
+
+This will likely be expanded in the future to accommodate more detailed information.
 ### Artwork
+|Method| Path           |Success Code(s)| Error Code(s) |
+|------|----------------|---------------|---------------|
+|GET   |/api/artwork/   |200 OK         |400 Bad Request|
+|GET   |/api/artwork/:id|200 OK         |404 Not Found  | 
+
+Little has changed from the proposal for artoworks, main difference is path and GET with an id.
+
+Current data model looks like:
+* id
+* title
+* alt titles
+* date
+* artist
+* creation location
+* short desc
+
+May be expanded or adjusted in the future.
 
 ## Test cURL Commands
 All commands in this section have been tested with Windows Git Bash
