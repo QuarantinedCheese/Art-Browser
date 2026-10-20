@@ -2,7 +2,7 @@
 
 import { Router } from "express";
 import { createFavouriteController, findFavouritesController, getFavouriteById, updateFavouriteController,  deleteFavouriteController} from '../controllers/favourites.controllers.js';
-import { validateFavourites } from "../middleware/validate-favourites";
+import { validateFavourites } from "../middleware/validate-favourites.js";
 
 export const favouritesRouter = Router();
 

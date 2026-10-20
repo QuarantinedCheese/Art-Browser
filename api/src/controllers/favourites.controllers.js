@@ -1,9 +1,15 @@
 // TODO: control favourites (?)
 
 import { createFavourite, findFavourites, findFavouriteById, updateFavourites, deleteFavourite } from "../data/favourites.js";
-import { HttpError } from "../utils/http-error";
+import { HttpError } from "../utils/http-error.js";
+import { validateFavourites } from "../validators/favourite.js";
 
 export function createFavouriteController (req, res) {
+    const errors = validateFavourites(req.body);
+
+if (errors) {
+    return res.status(400).json({ errors});
+}
     const favourite = createFavourite(req.body);
 
     res.location(`/api/favourites/${favourite.favouritesId}`)
@@ -45,4 +51,7 @@ export function deleteFavouriteController(req, res) {
     }
     res.status(204).end();
 }
+
+
+
 

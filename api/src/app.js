@@ -7,7 +7,7 @@ import express from 'express';
 import { requestLogger } from './middleware/request-logger.js';
 import { notFound } from './middleware/not-found.js';
 import { errorHandler } from './middleware/error-handler.js';
-
+import { favouritesRouter } from './routes/favourites.routes.js';
 import { artworkRouter } from './routes/artworks.routes.js';
 import { usersRouter } from './routes/users.routes.js';
 
@@ -24,6 +24,7 @@ app.get('/api/health', (req, res) => {
 // Placeholder routes, this is how Express knows what to do with each path
 app.use('/api/users', usersRouter);
 // app.use('/api/favourites', favsRouter);
+app.use('/api/favourites', favouritesRouter);
 app.use('/api/artwork', artworkRouter);
 
 
